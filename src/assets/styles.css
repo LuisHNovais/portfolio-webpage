@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+html{scroll-behavior:smooth}
+	
+body {
+	background-color:#171717;
+	color:#fff;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+* { 
+	color:#fff; 
+	text-decoration: none;
+}
+
+.navbar{
+	margin-top: 10px;
+	margin-bottom: 70px;
+}
+
+.navbar ul{
+	width: 100%;
+}
+
+.navbar .nav-item{
+	margin-right: 15px;
+}
+
+.navbar .nav-item.hundred{
+	width: 100%;
+	margin-right: 0!important;
+}
+
+.navbar .nav-link{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: 2px;
+}
+
+.navbar .nav-item.hundred .nav-link{
+	font-weight: bold!important;
+}
+
+.navbar .nav-link.active{
+	color: #ffde00;
+}
+
+.navbar .row-group{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+}
+
+.navbar .col-md-6{
+	display: flex;
+	flex-direction: row;
+	margin: 0 -5px;
+	padding: 0;
+}
+
+.navbar .col-md-6.flex-end{
+	float: right;
+	text-align: end;
+	display: flex;
+}
+
+.navbar .navbar-toggler{
+	display: none!important;
+	float: right; 
+	display: flex; 
+	text-align: end; 
+}
+
+.navbar .navbar-toggler{
+	border: none;
+	box-shadow: none;
+}
+
+.navbar .navbar-toggler:active{
+	border: none;
+	box-shadow: none;
+}
+
+.navbar .navbar-toggler:focus{
+	border: none;
+	box-shadow: none;
+}
+
+.navbar .navbar-toggler i{
+	display: none!important;
+	color: white; 
+	font-size: 30px; 
+	justify-content: end; 
+	float: right; 
+	display: flex; 
+	text-align: end; 
+	width: 100%;
+}
+
+.home .title{
+	color: #ffde00; 
+	text-transform: uppercase; 
+	letter-spacing: 2px;
+	font-size: 60px;
+    font-weight: bold;
+}
+
+.home .subtitle{
+	color: #fff; 
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
+	font-size: 30px; 
+	font-weight: 600; 
+	margin-top: -10px; 
+	margin-bottom: 30px;
+}
+
+.home .about{
+	color: #b9babe; 
+	text-transform: uppercase; 
+	font-weight: 500;
+	font-size: 19px; 
+}
+
+.home .about span{
+	color: white;
+}
+
+.skill-bars{
+	padding: 25px 30px;
+	width: 100%;
+}
+
+.skill-bars .bar{
+	margin: 20px 0;
+}
+
+.skill-bars .bar:first-child{
+	margin-top: 0px;
+}
+
+.skill-bars .bar .info{
+	margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span{
+	font-weight: 500;
+	font-size: 17px;
+	opacity: 0;
+	animation: showText 0.5s 1s linear forwards;
+	color: #b9babe;
+}
+
+@keyframes showText {
+	100%{
+opacity: 1;
+	}
+}
+
+.skill-bars .bar .progress-line{
+	height: 10px;
+	width: 100%;
+	background: #403f3f;
+	position: relative;
+	transform: scaleX(0);
+	transform-origin: left;
+	border-radius: 10px;
+	animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+	100%{
+transform: scaleX(1);
+	}
+}
+
+.bar .progress-line span{
+	height: 100%;
+	position: absolute;
+	border-radius: 10px;
+	transform: scaleX(0);
+	transform-origin: left;
+	background: #ffde00;
+	animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line.java span{
+	width: 90%;
+}
+.bar .progress-line.php span{
+	width: 40%;
+}
+.bar .progress-line.html span{
+	width: 85%;
+}
+.bar .progress-line.css span{
+	width: 60%;
+}
+.bar .progress-line.sql span{
+	width: 75%;
+}
+
+.progress-line span::before{
+	position: absolute;
+	content: "";
+	top: -10px;
+	right: 0;
+	height: 0;
+	width: 0;
+	border: 7px solid transparent;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	border-top-color: #000;
+	opacity: 0;
+	animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after{
+	position: absolute;
+	top: -28px;
+	right: 0;
+	font-weight: 500;
+	background: #000;
+	color: #fff;
+	padding: 1px 8px;
+	font-size: 12px;
+	border-radius: 3px;
+	opacity: 0;
+	animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+	100%{
+opacity: 1;
+	}
+}
+
+.progress-line.java span::after{
+	content: "90%";
+}
+
+.progress-line.php span::after{
+	content: "40%";
+}
+
+.progress-line.html span::after{
+	content: "85%";
+}
+
+.progress-line.css span::after{
+	content: "60%";
+}
+
+.progress-line.sql span::after{
+	content: "75%";
+}
+
+.projects .col-md-3{
+	margin-bottom: 10px;
+}
+
+.home .skills-card .card {
+	height: 100%; 
+	background-color: rgb(45, 45, 45); 
+	border-radius: 15px;
+}
+
+.home .skills-card .card .top {
+	padding: 10px 20px; 
+	height: 35px; 
+	background-color: rgb(43, 43, 43); 
+	border-top-left-radius: 15px; 
+	border-top-right-radius: 15px;
+}
+
+.home .skills-card .card .top .circle {
+	width: 15px; 
+	height: 15px; 
+	border-radius: 9999px; 
+	padding: 0; 
+	margin-right: 5px;
+}
+
+.projects{
+	margin-top: 100px; 
+	margin-bottom: 90px;
+}
+
+.projects .title{
+	text-align: center;
+}
+
+.projects .title h1{
+	text-transform: uppercase; 
+	font-size: 40px; 
+	margin-bottom: 40px;
+}
+
+.projects .content .card{
+	height: 100%; 
+	background-color: rgb(45, 45, 45); 
+	border-radius: 15px;
+}
+
+.projects .content .card .top{
+	padding: 10px 20px; 
+	height: 35px; 
+	background-color: rgb(43, 43, 43); 
+	border-top-left-radius: 15px; 
+	border-top-right-radius: 15px;
+}
+
+.projects .content .card .top .row .circle{
+	width: 15px;
+	height: 15px;
+	border-radius: 9999px;
+	padding: 0;
+	margin-right: 5px;
+}
+
+.projects .content .card .bottom{
+	border-radius: 15px; 
+	padding: 10px;
+}
+
+.projects .content .card .bottom img{
+	width: 100%; 
+	border-radius: 10px;
+}
+
+.projects .content .card .bottom a{
+	font-size: 20px; 
+	margin: 10px 10px 0 10px; 
+	font-weight: 600; 
+	text-decoration: none; 
+	padding: 0; 
+	color: #fff;
+}
+
+.projects .content .card .bottom small{
+	margin: -5px 10px 10px; 
+	color: #b9babe; 
+	padding: 0;
+}
+
+.contact{
+	margin-bottom: 100px;
+}
+
+.contact .title{
+	text-align: center;
+}
+
+.contact .title h1{
+	text-transform: uppercase; 
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+
+.contact .social{
+	text-align: center; 
+	text-decoration: none; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center;
+}
+
+.contact .social .icon{
+	background: rgb(45, 45, 45); 
+	border-radius: 100%; 
+	padding: 25px 0; 
+	width: 100px
+}
+
+.contact .social i {
+	color: #ffde00; 
+	font-size: 50px;
+}
+
+.contact .social .name{
+	font-size: 20px; 
+	font-weight: 600; 
+	margin: 0;
+    text-transform: uppercase;
+}
+
+.contact .social .desc{
+	color: #ffde00;
+	font-size: 16px; 
+	margin: 0;
+}
+
+.footer footer{
+	background: rgb(45, 44, 44); 
+	min-height: 70px; 
+	display: flex; 
+	align-items: center;
+}
+
+.footer p{
+	font-size: 15px; 
+	margin: 0; 
+	padding: 0;
+}
+
+.footer span{
+	font-weight: bold;
+}
+
+.footer a{
+	font-size: 25px; 
+	margin: 0; 
+	padding: 0; 
+	text-align: end; 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: white; 
+	display: flex; 
+	float: right; 
+	margin-left: 10px;
+}
+
+@media only screen and (max-width:990px){
+	.navbar .navbar-toggler{
+display: block!important;
+width: 100%;
+	}
+	.navbar .navbar-toggler i{
+display: block!important;
+	}
+	.navbar .row-group{
+flex-direction: column;
+justify-content: unset;
+margin-left: 0;
+	}
+	.navbar .col-md-6{
+flex-direction: column;
+	}
+	.navbar .col-md-6.flex-end{
+float: left;
+text-align: start;
+	}
+}
+
+@media only screen and (max-width:768px){
+	.presentation{
+text-align: center;
+	}
+
+	.skills-card{
+margin-top: 40px;
+	}
+
+	.projects .content .col-md-4{
+margin-top: 20px;
+	}
+
+	.contact .social{
+margin-top: 30px;
+	}
+}
